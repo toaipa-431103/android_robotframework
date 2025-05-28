@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-28T10:45:43.953986" rpa="false" schemaversion="5">
+<suite id="s1" name="Android" source="C:\Users\AutoTest\PycharmProjects\android\tests\Android.robot">
+<test id="s1-t1" name="Test Add Two Numbers" line="20">
+<kw name="Open Test App" owner="common" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>automationName=${automation_name}</arg>
+<arg>platformName=${platform_name}</arg>
+<arg>platformVersion=${platform_version}</arg>
+<arg>deviceName=${device_name}</arg>
+<arg>udid=${udid}</arg>
+<arg>appPackage=${app_package}</arg>
+<arg>appActivity=${app_activity}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-05-28T10:45:44.135275" elapsed="6.277248"/>
+</kw>
+<status status="PASS" start="2025-05-28T10:45:44.134811" elapsed="6.278146"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-28T10:45:50.418071" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.sec.android.app.popupcalculator:id/calc_keypad_btn_05")'.</msg>
+<arg>${btn_5}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-28T10:45:50.413963" elapsed="0.584345"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-28T10:45:51.002799" level="INFO">Clicking element 'accessibility_id=Cộng'.</msg>
+<arg>${btn_plus}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-28T10:45:50.999148" elapsed="0.658007"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-28T10:45:51.658374" level="INFO">Clicking element 'accessibility_id=3'.</msg>
+<arg>${btn_3}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-28T10:45:51.657427" elapsed="0.670789"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-28T10:45:52.333199" level="INFO">Clicking element 'accessibility_id=Bằng'.</msg>
+<arg>${btn_equal}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-28T10:45:52.329031" elapsed="1.336706"/>
+</kw>
+<kw name="Get Text" owner="AppiumLibrary">
+<msg time="2025-05-28T10:45:53.752395" level="INFO">Element 'id=com.sec.android.app.popupcalculator:id/calc_edt_formula' text is '8 Kết quả tính toán' </msg>
+<msg time="2025-05-28T10:45:53.752507" level="INFO">criteria is com.sec.android.app.popupcalculator:id/calc_edt_formula</msg>
+<msg time="2025-05-28T10:45:53.752665" level="INFO">${text} = 8 Kết quả tính toán</msg>
+<var>${text}</var>
+<arg>${txt_result}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<status status="PASS" start="2025-05-28T10:45:53.666006" elapsed="0.086706"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2025-05-28T10:45:53.754041" level="INFO">${result} = 8</msg>
+<var>${result}</var>
+<arg>${text}</arg>
+<arg>${SPACE}Kết quả tính toán</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-05-28T10:45:53.753159" elapsed="0.000930"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>8</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-05-28T10:45:53.754468" elapsed="0.000311"/>
+</kw>
+<kw name="Close Test App" owner="common" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-05-28T10:45:53.755768" elapsed="0.695070"/>
+</kw>
+<status status="PASS" start="2025-05-28T10:45:53.755344" elapsed="0.695791"/>
+</kw>
+<status status="PASS" start="2025-05-28T10:45:44.134269" elapsed="10.317987"/>
+</test>
+<test id="s1-t2" name="Test Subtract Two Numbers" line="29">
+<kw name="Open Test App" owner="common" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>automationName=${automation_name}</arg>
+<arg>platformName=${platform_name}</arg>
+<arg>platformVersion=${platform_version}</arg>
+<arg>deviceName=${device_name}</arg>
+<arg>udid=${udid}</arg>
+<arg>appPackage=${app_package}</arg>
+<arg>appActivity=${app_activity}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-05-28T10:45:54.456548" elapsed="6.112866"/>
+</kw>
+<status status="PASS" start="2025-05-28T10:45:54.455729" elapsed="6.113773"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-28T10:46:00.570659" level="INFO">Clicking element 'android=new UiSelector().resourceId("com.sec.android.app.popupcalculator:id/calc_keypad_btn_05")'.</msg>
+<arg>${btn_5}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-28T10:46:00.569726" elapsed="0.684779"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-28T10:46:01.258971" level="INFO">Clicking element 'accessibility_id=Trừ'.</msg>
+<arg>${btn_subtract}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-28T10:46:01.255322" elapsed="0.661933"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-28T10:46:01.922237" level="INFO">Clicking element 'accessibility_id=3'.</msg>
+<arg>${btn_3}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-28T10:46:01.918087" elapsed="0.649187"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-28T10:46:02.572138" level="INFO">Clicking element 'accessibility_id=Bằng'.</msg>
+<arg>${btn_equal}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-28T10:46:02.568078" elapsed="1.347465"/>
+</kw>
+<kw name="Get Text" owner="AppiumLibrary">
+<msg time="2025-05-28T10:46:04.036570" level="INFO">Element 'id=com.sec.android.app.popupcalculator:id/calc_edt_formula' text is '2 Kết quả tính toán' </msg>
+<msg time="2025-05-28T10:46:04.036646" level="INFO">criteria is com.sec.android.app.popupcalculator:id/calc_edt_formula</msg>
+<msg time="2025-05-28T10:46:04.036730" level="INFO">${text} = 2 Kết quả tính toán</msg>
+<var>${text}</var>
+<arg>${txt_result}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<status status="PASS" start="2025-05-28T10:46:03.916380" elapsed="0.120377"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2025-05-28T10:46:04.037645" level="INFO">${result} = 2</msg>
+<var>${result}</var>
+<arg>${text}</arg>
+<arg>${SPACE}Kết quả tính toán</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2025-05-28T10:46:04.037074" elapsed="0.000604"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>2</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-05-28T10:46:04.037954" elapsed="0.000207"/>
+</kw>
+<kw name="Close Test App" owner="common" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-05-28T10:46:04.038951" elapsed="0.792658"/>
+</kw>
+<status status="PASS" start="2025-05-28T10:46:04.038538" elapsed="0.793150"/>
+</kw>
+<status status="PASS" start="2025-05-28T10:45:54.454295" elapsed="10.377667"/>
+</test>
+<status status="PASS" start="2025-05-28T10:45:43.955367" elapsed="20.877239"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Android" id="s1" pass="2" fail="0" skip="0">Android</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
